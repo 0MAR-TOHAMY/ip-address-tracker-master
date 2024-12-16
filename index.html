@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <link rel="stylesheet" href="styles.css">
   <title>IP Address Tracker</title>
 </head>
@@ -11,18 +13,32 @@
     <div class="details">
       <h1>IP Address Tracker</h1>
       <div class="search">
-        <input type="text" id="ip-input" placeholder="Search for any IP address or domain">
-        <button type="submit"><img src="./images/icon-arrow.svg" alt="arrow"></button>
+        <input type="text" name="ip-input" id="ip-input" placeholder="Search for any IP address or domain">
+        <button class="verify"><img src="./images/icon-arrow.svg" alt="arrow"></button>
       </div>
       <div class="result">
-        <h2>IP ADDREESS<br><span>192.168.1.1</span></h2>
-        <h2>LOCATION<br><span>192.168.1.1</span></h2>
-        <h2>TIMEZONE<br><span>192.168.1.1</span></h2>
-        <h2>ISP<br><span>192.168.1.1</span></h2>
+        <div class="data">
+          <h2>IP ADDREESS</h2>
+          <span id="address">192.212.174.101</span>
+        </div>
+        <div class="data">
+          <h2>LOCATION</h2>
+          <span id="location">Brooklyn, Ny 10001</span>
+        </div>
+        <div class="data">
+          <h2>TIMEZONE</h2>
+          <span id="zone">UTC - 05:00</span>
+        </div>
+        <div class="data">
+          <h2>ISP</h2>
+          <span id="isp">SpaceX StarLink</span>
+        </div>
       </div>
     </div>
     <img src="./images/pattern-bg-desktop.png" alt="pattern-bg-desktop">
-    <div class="map"></div>
+    <div id="map">
+      
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
